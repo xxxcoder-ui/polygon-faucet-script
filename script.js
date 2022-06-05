@@ -29,10 +29,10 @@ async function tryMultiple(numTimes) {
   console.log(`tryMultiple: tryOnceResult = ${tryOnceResult}`);
   if (tryOnceResult === "success") {
     // Try after 62 seconds
-    setTimeout(() => tryMultiple(numTimes - 1), 62000);
+    setTimeout(() => tryMultiple(numTimes - 1), 0);
   } else if (tryOnceResult === "greylisted") {
     // Try after 62 seconds, don't decrement numTimes
-    setTimeout(() => tryMultiple(numTimes), 62000);
+    setTimeout(() => tryMultiple(numTimes), 0);
   } else {
     // Try again immediately
     tryMultiple(numTimes);
