@@ -4,7 +4,7 @@ async function tryOnce() {
   const response = await axios.post(
     "https://api.faucet.matic.network/transferTokens",
     {
-      network: "mumbai",
+      network: "mainnet",
       address: process.argv[3],
       token: "maticToken",
     }
